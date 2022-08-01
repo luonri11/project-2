@@ -68,3 +68,14 @@ select* from melbor_house
 SELECT COUNT(DISTINCT Suburb)
 FROM melb_data;
 select*from melbor_venhouse
+    
+SELECT    
+	Suburb,  
+	Venue, 
+	category
+FROM    
+	melbourne_venues
+WHERE category = 'Asian Restaurant'
+ORDER BY 
+	Suburb;
+	
