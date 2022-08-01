@@ -64,18 +64,18 @@
 -- where melb_data.price < '2000000' and melb_data.rooms > 4	
 	
 -- 	;
-select* from melbor_house
-SELECT COUNT(DISTINCT Suburb)
-FROM melb_data;
+select* from melbo
+SELECT COUNT(DISTINCT "Suburb")
+FROM melbor_venhouse ;
 select*from melbor_venhouse
     
 SELECT    
-	Suburb,  
-	Venue, 
-	category
+	"Suburb",  
+	"Venue", 
+	"Venuecategory"
 FROM    
-	melbourne_venues
-WHERE category = 'Asian Restaurant'
+	melbor_venhouse
+WHERE "Venuecategory" = 'Asian Restaurant'
 ORDER BY 
-	Suburb;
-	
+	"Suburb";
+
