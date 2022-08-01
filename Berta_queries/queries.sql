@@ -15,10 +15,11 @@
 	
 	;
 
-	-- Identify the price of the property from the melbour_housing table for all the venues in melbor_venue
-SELECT melbor_venue."Venue", melbor_venue."Venuecategory", melbor_venue."Suburb", melbor_housing."Price"
+-- Identify the price of the property from the melbour_housing table for all the venues in melbor_venue where there are more than 3 rooms
+SELECT melbor_venue."Venue", melbor_venue."Venuecategory", melbor_venue."Suburb", melbor_housing."Price", melbor_housing."Rooms"
 FROM melbor_venue
 LEFT JOIN melbor_housing ON 
 	melbor_venue."Suburb" = melbor_housing."Suburb"
 	and melbor_venue."Latitude" = melbor_housing."Lattitude"  
-	and melbor_venue."Longitude" = melbor_housing."Longtitude";
+	and melbor_venue."Longitude" = melbor_housing."Longtitude"
+	where melbor_housing."Rooms" >3 ;
